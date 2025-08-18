@@ -1,0 +1,17 @@
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\bin\Release\net8.0\Company.Project.Application.deps.json
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\bin\Release\net8.0\Company.Project.Application.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\bin\Release\net8.0\Company.Project.Application.pdb
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\bin\Release\net8.0\Company.Project.Domain.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\bin\Release\net8.0\Company.Project.Infrastructure.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\bin\Release\net8.0\Company.Project.Infrastructure.pdb
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\bin\Release\net8.0\Company.Project.Domain.pdb
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\Company.Project.Application.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\Company.Project.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\Company.Project.Application.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\Company.Project.Application.AssemblyInfo.cs
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\Company.Project.Application.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\Company..E218343D.Up2Date
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\Company.Project.Application.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\refint\Company.Project.Application.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\Company.Project.Application.pdb
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Release\net8.0\ref\Company.Project.Application.dll

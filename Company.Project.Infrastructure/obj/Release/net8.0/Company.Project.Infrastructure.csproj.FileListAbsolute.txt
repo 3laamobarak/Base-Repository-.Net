@@ -1,0 +1,17 @@
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\bin\Release\net8.0\Company.Project.Infrastructure.deps.json
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\bin\Release\net8.0\Company.Project.Infrastructure.runtimeconfig.json
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\bin\Release\net8.0\Company.Project.Infrastructure.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\bin\Release\net8.0\Company.Project.Infrastructure.pdb
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\bin\Release\net8.0\Company.Project.Domain.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\bin\Release\net8.0\Company.Project.Domain.pdb
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\Company.Project.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\Company.Project.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\Company.Project.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\Company.Project.Infrastructure.AssemblyInfo.cs
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\Company.Project.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\Company..B7B8891A.Up2Date
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\Company.Project.Infrastructure.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\refint\Company.Project.Infrastructure.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\Company.Project.Infrastructure.pdb
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\Company.Project.Infrastructure.genruntimeconfig.cache
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Release\net8.0\ref\Company.Project.Infrastructure.dll
