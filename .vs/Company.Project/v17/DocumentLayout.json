@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|solutionrelative:company.project.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|solutionrelative:company.project.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807194545_last.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Company.Project.Infrastructure\\Migrations\\20250807194545_last.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.pl\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|solutionrelative:company.project.pl\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE82766-A268-43DB-A0DC-6416BAA7C4FB}|Company.Project.Application\\Company.Project.Application.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE82766-A268-43DB-A0DC-6416BAA7C4FB}|Company.Project.Application\\Company.Project.Application.csproj|solutionrelative:company.project.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE82766-A268-43DB-A0DC-6416BAA7C4FB}|Company.Project.Application\\Company.Project.Application.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.application\\contracts\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE82766-A268-43DB-A0DC-6416BAA7C4FB}|Company.Project.Application\\Company.Project.Application.csproj|solutionrelative:company.project.application\\contracts\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDE82766-A268-43DB-A0DC-6416BAA7C4FB}|Company.Project.Application\\Company.Project.Application.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.application\\dto\\account\\authmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDE82766-A268-43DB-A0DC-6416BAA7C4FB}|Company.Project.Application\\Company.Project.Application.csproj|solutionrelative:company.project.application\\dto\\account\\authmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|solutionrelative:company.project.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D605FEC5-056E-4D23-9E97-7902F3F2D5CD}|Company.Project.Domain\\Company.Project.Domain.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.domain\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D605FEC5-056E-4D23-9E97-7902F3F2D5CD}|Company.Project.Domain\\Company.Project.Domain.csproj|solutionrelative:company.project.domain\\models\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20251022160444_refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Company.Project.Infrastructure\\Migrations\\20251022160444_refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D605FEC5-056E-4D23-9E97-7902F3F2D5CD}|Company.Project.Domain\\Company.Project.Domain.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.domain\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D605FEC5-056E-4D23-9E97-7902F3F2D5CD}|Company.Project.Domain\\Company.Project.Domain.csproj|solutionrelative:company.project.domain\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16CDEB50-CC96-4857-A5DA-DCC806858912}|Company.Project.Infrastructure\\Company.Project.Infrastructure.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.infrastructure\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16CDEB50-CC96-4857-A5DA-DCC806858912}|Company.Project.Infrastructure\\Company.Project.Infrastructure.csproj|solutionrelative:company.project.infrastructure\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807194121_last.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Company.Project.Infrastructure\\Migrations\\20250807194121_last.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807192753_deploi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Company.Project.Infrastructure\\Migrations\\20250807192753_deploi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.pl\\controllers\\otpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{059470A1-392C-44C8-B164-812A5B874C3C}|Company.Project.PL\\Company.Project.PL.csproj|solutionrelative:company.project.pl\\controllers\\otpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16CDEB50-CC96-4857-A5DA-DCC806858912}|Company.Project.Infrastructure\\Company.Project.Infrastructure.csproj|c:\\users\\dell\\desktop\\iti\\companytask\\company.project\\company.project.infrastructure\\migrations\\20250807195302_last.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16CDEB50-CC96-4857-A5DA-DCC806858912}|Company.Project.Infrastructure\\Company.Project.Infrastructure.csproj|solutionrelative:company.project.infrastructure\\migrations\\20250807195302_last.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,112 +54,153 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Application\\Contracts\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Company.Project.Application\\Contracts\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Application\\Contracts\\IAuthService.cs",
+              "RelativeToolTip": "Company.Project.Application\\Contracts\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T18:07:17.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.PL\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Company.Project.PL\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.PL\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Company.Project.PL\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAUwFMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T17:19:42.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Company.Project.Application\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "Company.Project.Application\\Services\\AuthService.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAuwH4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T16:09:23.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Application\\DTO\\Account\\AuthModel.cs",
+              "RelativeDocumentMoniker": "Company.Project.Application\\DTO\\Account\\AuthModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Application\\DTO\\Account\\AuthModel.cs",
+              "RelativeToolTip": "Company.Project.Application\\DTO\\Account\\AuthModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T16:06:45.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20251022160444_refreshtoken.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20251022160444_refreshtoken.cs",
+              "RelativeDocumentMoniker": "Company.Project.Infrastructure\\Migrations\\20251022160444_refreshtoken.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20251022160444_refreshtoken.cs",
+              "RelativeToolTip": "Company.Project.Infrastructure\\Migrations\\20251022160444_refreshtoken.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T16:04:44.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Domain\\Models\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "Company.Project.Domain\\Models\\RefreshToken.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Domain\\Models\\RefreshToken.cs",
+              "RelativeToolTip": "Company.Project.Domain\\Models\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T16:01:08.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.PL\\Program.cs",
               "RelativeDocumentMoniker": "Company.Project.PL\\Program.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.PL\\Program.cs",
               "RelativeToolTip": "Company.Project.PL\\Program.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAADgv3EAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T15:00:45.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20250807195302_last.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807195302_last.cs",
-              "RelativeDocumentMoniker": "Company.Project.Infrastructure\\Migrations\\20250807195302_last.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807195302_last.cs",
-              "RelativeToolTip": "Company.Project.Infrastructure\\Migrations\\20250807195302_last.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T19:53:02.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Context.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Context.cs",
-              "RelativeDocumentMoniker": "Company.Project.Infrastructure\\Context.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Context.cs",
-              "RelativeToolTip": "Company.Project.Infrastructure\\Context.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T19:46:35.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20250807194545_last.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807194545_last.cs",
-              "RelativeDocumentMoniker": "Company.Project.Infrastructure\\Migrations\\20250807194545_last.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807194545_last.cs",
-              "RelativeToolTip": "Company.Project.Infrastructure\\Migrations\\20250807194545_last.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAiwD4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T19:45:45.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20250807194121_last.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807194121_last.cs",
-              "RelativeDocumentMoniker": "Company.Project.Infrastructure\\Migrations\\20250807194121_last.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807194121_last.cs",
-              "RelativeToolTip": "Company.Project.Infrastructure\\Migrations\\20250807194121_last.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T19:41:21.943Z"
+              "WhenOpened": "2025-08-15T15:00:45.508Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "20250807192753_deploi.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807192753_deploi.cs",
-              "RelativeDocumentMoniker": "Company.Project.Infrastructure\\Migrations\\20250807192753_deploi.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Migrations\\20250807192753_deploi.cs",
-              "RelativeToolTip": "Company.Project.Infrastructure\\Migrations\\20250807192753_deploi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T19:27:53.534Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.PL\\appsettings.json",
               "RelativeDocumentMoniker": "Company.Project.PL\\appsettings.json",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.PL\\appsettings.json",
               "RelativeToolTip": "Company.Project.PL\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-07T19:20:25.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Domain\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Company.Project.Domain\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Domain\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Company.Project.Domain\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T15:59:27.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "OTPController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.PL\\Controllers\\OTPController.cs",
               "RelativeDocumentMoniker": "Company.Project.PL\\Controllers\\OTPController.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.PL\\Controllers\\OTPController.cs",
               "RelativeToolTip": "Company.Project.PL\\Controllers\\OTPController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-07T15:22:17.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Context.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Context.cs",
+              "RelativeDocumentMoniker": "Company.Project.Infrastructure\\Context.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\ITI\\CompanyTask\\Company.Project\\Company.Project.Infrastructure\\Context.cs",
+              "RelativeToolTip": "Company.Project.Infrastructure\\Context.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T19:46:35.119Z",
+              "EditorCaption": ""
             }
           ]
         }

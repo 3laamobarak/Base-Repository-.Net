@@ -1,15 +1,15 @@
 [
   {
     "ContainingType": "Company.Project.PL.Controllers.AccountController",
-    "Method": "Login",
-    "RelativePath": "Account/Login",
+    "Method": "AddRoleAsync",
+    "RelativePath": "api/Account/AddRole",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userDto",
-        "Type": "Company.Project.Application.DTO.LoginCompanyDTO",
+        "Name": "model",
+        "Type": "Company.Project.Application.DTO.Account.AddRole",
         "IsRequired": true
       }
     ],
@@ -17,15 +17,89 @@
   },
   {
     "ContainingType": "Company.Project.PL.Controllers.AccountController",
-    "Method": "Register",
-    "RelativePath": "Account/register",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Account/ChangePassword",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userDto",
-        "Type": "Company.Project.Application.DTO.RegisterCompanyDto",
+        "Name": "cpDTo",
+        "Type": "Company.Project.Application.DTO.ChangePasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Company.Project.PL.Controllers.AccountController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/Account/refreshToken",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Company.Project.PL.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Company.Project.Application.DTO.Account.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Company.Project.PL.Controllers.AccountController",
+    "Method": "RequestPasswordReset",
+    "RelativePath": "api/Account/request-reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "emailDto",
+        "Type": "Company.Project.Application.DTO.EmailDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Company.Project.PL.Controllers.AccountController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Account/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resetPasswordDto",
+        "Type": "Company.Project.Application.DTO.ResetPasswordDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Company.Project.PL.Controllers.AccountController",
+    "Method": "GetTokenAsync",
+    "RelativePath": "api/Account/token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Company.Project.Application.DTO.Account.TokenRequestModel",
         "IsRequired": true
       }
     ],
@@ -34,7 +108,7 @@
   {
     "ContainingType": "Company.Project.PL.Controllers.ExampleClassController",
     "Method": "GetAll",
-    "RelativePath": "ExampleClass",
+    "RelativePath": "api/ExampleClass",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -55,7 +129,7 @@
   {
     "ContainingType": "Company.Project.PL.Controllers.ExampleClassController",
     "Method": "Create",
-    "RelativePath": "ExampleClass",
+    "RelativePath": "api/ExampleClass",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -71,7 +145,7 @@
   {
     "ContainingType": "Company.Project.PL.Controllers.ExampleClassController",
     "Method": "GetById",
-    "RelativePath": "ExampleClass/{id}",
+    "RelativePath": "api/ExampleClass/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -87,7 +161,7 @@
   {
     "ContainingType": "Company.Project.PL.Controllers.ExampleClassController",
     "Method": "Update",
-    "RelativePath": "ExampleClass/{id}",
+    "RelativePath": "api/ExampleClass/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -108,7 +182,7 @@
   {
     "ContainingType": "Company.Project.PL.Controllers.ExampleClassController",
     "Method": "Delete",
-    "RelativePath": "ExampleClass/{id}",
+    "RelativePath": "api/ExampleClass/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -124,7 +198,7 @@
   {
     "ContainingType": "Company.Project.PL.Controllers.OTPController",
     "Method": "SendOTP",
-    "RelativePath": "OTP/send",
+    "RelativePath": "api/OTP/send",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -140,7 +214,7 @@
   {
     "ContainingType": "Company.Project.PL.Controllers.OTPController",
     "Method": "ValidateOTP",
-    "RelativePath": "OTP/validate",
+    "RelativePath": "api/OTP/validate",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

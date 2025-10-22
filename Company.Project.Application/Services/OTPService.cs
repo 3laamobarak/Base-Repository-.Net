@@ -41,7 +41,8 @@ namespace Company.Project.Application.Services
             {
                 To = email,
                 Subject = "Email Verification",
-                Body = $"<h1>Email Verification Code</h1><p>Your verification code is: <strong>{otp}</strong></p><p>This code will expire in 5 minutes.</p>"
+                Body =
+                    $"<h1>Email Verification Code</h1><p>Your verification code is: <strong>{otp}</strong></p><p>This code will expire in 5 minutes.</p>"
             };
 
             await _emailService.SendEmailAsync(emailDto);
@@ -51,10 +52,14 @@ namespace Company.Project.Application.Services
         public async Task<bool> ValidateOTPAsync(string email, string otp)
         {
             var otpEntity = await _otpRepository.GetByEmailAsync(email);
-            if (otpEntity == null || otpEntity.Code != otp || otpEntity.IsUsed ||
-                otpEntity.ExpirationTime <= DateTime.UtcNow)
+            if (otpEntity == null || otpEntity.IsUsed || otpEntity.ExpirationTime < DateTime.UtcNow)
             {
-                return false;
+                return false; // OTP not found, used, or expired
+            }
+
+            if (otpEntity.Code != otp)
+            {
+                return false; // OTP does not match
             }
 
             otpEntity.IsUsed = true;

@@ -6,7 +6,7 @@
     "version": "v1"
   },
   "paths": {
-    "/Account/register": {
+    "/api/Account/Register": {
       "post": {
         "tags": [
           "Account"
@@ -15,17 +15,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterCompanyDto"
+                "$ref": "#/components/schemas/RegisterModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterCompanyDto"
+                "$ref": "#/components/schemas/RegisterModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterCompanyDto"
+                "$ref": "#/components/schemas/RegisterModel"
               }
             }
           }
@@ -37,7 +37,7 @@
         }
       }
     },
-    "/Account/Login": {
+    "/api/Account/token": {
       "post": {
         "tags": [
           "Account"
@@ -46,17 +46,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginCompanyDTO"
+                "$ref": "#/components/schemas/TokenRequestModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginCompanyDTO"
+                "$ref": "#/components/schemas/TokenRequestModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginCompanyDTO"
+                "$ref": "#/components/schemas/TokenRequestModel"
               }
             }
           }
@@ -68,7 +68,143 @@
         }
       }
     },
-    "/ExampleClass": {
+    "/api/Account/AddRole": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRole"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRole"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddRole"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/refreshToken": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/ChangePassword": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/request-reset-password": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/reset-password": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ExampleClass": {
       "get": {
         "tags": [
           "ExampleClass"
@@ -129,7 +265,7 @@
         }
       }
     },
-    "/ExampleClass/{id}": {
+    "/api/ExampleClass/{id}": {
       "get": {
         "tags": [
           "ExampleClass"
@@ -213,7 +349,7 @@
         }
       }
     },
-    "/OTP/send": {
+    "/api/OTP/send": {
       "post": {
         "tags": [
           "OTP"
@@ -244,7 +380,7 @@
         }
       }
     },
-    "/OTP/validate": {
+    "/api/OTP/validate": {
       "post": {
         "tags": [
           "OTP"
@@ -278,6 +414,52 @@
   },
   "components": {
     "schemas": {
+      "AddRole": {
+        "required": [
+          "role",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "role": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChangePasswordDTO": {
+        "required": [
+          "confirmPassword",
+          "currentPassword",
+          "email",
+          "newPassword"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "currentPassword": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "newPassword": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "confirmPassword": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateExampleClassDto": {
         "type": "object",
         "properties": {
@@ -306,20 +488,6 @@
         },
         "additionalProperties": false
       },
-      "LoginCompanyDTO": {
-        "type": "object",
-        "properties": {
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "OTPDTO": {
         "type": "object",
         "properties": {
@@ -334,40 +502,84 @@
         },
         "additionalProperties": false
       },
-      "RegisterCompanyDto": {
+      "RegisterModel": {
+        "required": [
+          "email",
+          "firstName",
+          "lastName",
+          "password",
+          "username"
+        ],
         "type": "object",
         "properties": {
-          "englishName": {
-            "type": "string",
-            "nullable": true
+          "firstName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
           },
-          "arabicName": {
-            "type": "string",
-            "nullable": true
+          "lastName": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "username": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string"
           },
           "email": {
+            "maxLength": 128,
+            "minLength": 0,
             "type": "string",
-            "nullable": true
+            "format": "email"
           },
           "password": {
+            "maxLength": 256,
+            "minLength": 0,
             "type": "string",
-            "nullable": true
+            "format": "password"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResetPasswordDTO": {
+        "required": [
+          "email",
+          "newPassword",
+          "token"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string"
           },
-          "phone": {
-            "type": "string",
-            "nullable": true
+          "token": {
+            "minLength": 1,
+            "type": "string"
           },
-          "logo": {
-            "type": "string",
-            "nullable": true
+          "newPassword": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TokenRequestModel": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string"
           },
-          "websiteURL": {
+          "password": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
-          },
-          "otpCode": {
-            "type": "string",
-            "nullable": true
+            "format": "password"
           }
         },
         "additionalProperties": false

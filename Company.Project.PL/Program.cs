@@ -1,6 +1,7 @@
 using System.Text;
 using Company.Project.Application.Contracts;
 using Company.Project.Application.DTO;
+using Company.Project.Application.Helper;
 using Company.Project.Application.Services;
 using Company.Project.Domain.Interfaces;
 using Company.Project.Domain.Models;
@@ -21,7 +22,7 @@ namespace Company.Project.PL
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            
+
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -32,16 +33,19 @@ namespace Company.Project.PL
             {
                 options.AddPolicy("Policy",
                     builder => builder.AllowAnyOrigin()
-                                      .AllowAnyMethod()
-                                      .AllowAnyHeader());
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
             });
             // bind email
             builder.Services.Configure<EmailSettingsDTO>(builder.Configuration.GetSection("EmailSettings"));
+            // bind jwt
+            builder.Services.Configure<JWT>(builder.Configuration.GetSection("JWT"));
 
-            builder.Services.AddIdentity<Domain.Models.Company, IdentityRole>().AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<Context>()
+                .AddDefaultTokenProviders();
             builder.Services.AddDbContext<Context>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            
+
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -53,17 +57,21 @@ namespace Company.Project.PL
                 options.RequireHttpsMetadata = false;
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
+                    ValidateIssuerSigningKey = true,
                     ValidateIssuer = true,
-                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
                     ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
                     ValidAudience = builder.Configuration["Jwt:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(
-                            Encoding.UTF8.GetBytes(builder.Configuration["JWT:SecritKey"]))
+                    IssuerSigningKey =
+                        new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"])),
+                    ClockSkew = TimeSpan.Zero
                 };
             });
             // builder.Services.AddSwaggerGen();
 
             #region Swagger Region
+
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -90,24 +98,31 @@ namespace Company.Project.PL
                                 Id = "Bearer"
                             }
                         },
-                        new string[] {}
+                        new string[] { }
                     }
                 });
             });
-            
+
             #endregion
-            
-            
+
+
             // register services
             builder.Services.AddScoped<IExampleClassService, ExampleClassService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
             builder.Services.AddScoped<IOTPService, OTPService>();
             builder.Services.AddScoped<IOTPRepository, OTPRepository>();
             builder.Services.AddScoped<IExampleClassRepository, ExampleClassRepository>();
-            builder.Services.AddScoped<IBaseRepository<ExampleClass>, BaseRepository<ExampleClass>>(); 
+            builder.Services.AddScoped<IBaseRepository<ExampleClass>, BaseRepository<ExampleClass>>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddSingleton<JWT>();
             var app = builder.Build();
+            // Seed Roles
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                SeedRolesAsync(services).Wait();
+            }
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -115,6 +130,7 @@ namespace Company.Project.PL
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
             app.UseCors("Policy");
             app.UseAuthentication();
             app.UseAuthorization();
@@ -123,6 +139,20 @@ namespace Company.Project.PL
             app.MapControllers();
 
             app.Run();
+        }
+
+        public static async Task SeedRolesAsync(IServiceProvider serviceProvider)
+        {
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+            string[] roleNames = { "Admin", "User" }; // Add all required roles here
+            foreach (var roleName in roleNames)
+            {
+                if (!await roleManager.RoleExistsAsync(roleName))
+                {
+                    await roleManager.CreateAsync(new IdentityRole(roleName));
+                }
+            }
         }
     }
 }

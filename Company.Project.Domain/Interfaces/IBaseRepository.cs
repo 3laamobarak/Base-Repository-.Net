@@ -23,6 +23,7 @@ namespace Company.Project.Domain.Interfaces
         Task UpdateAsync(T entity);
         Task UpdateRangeAsync(ICollection<T> entities);
         Task DeleteAsync(T entity);
+        Task HardDeleteAsync(T entity);
 
         Task<T> GetByExpressionSingleAsync(Expression<Func<T, bool>> expression,
             Expression<Func<T, object>>[] includes = null);

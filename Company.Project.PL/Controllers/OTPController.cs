@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Company.Project.PL.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class OTPController : ControllerBase
     {
         private readonly IOTPService _otpService;

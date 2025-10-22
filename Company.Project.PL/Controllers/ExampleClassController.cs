@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Company.Project.PL.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ExampleClassController : Controller
     {
         private readonly IExampleClassService _exampleClassService;

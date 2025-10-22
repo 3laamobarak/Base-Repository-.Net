@@ -497,3 +497,4 @@ C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.PL\bin\Deb
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.PL\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.PL\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.PL\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.PL\obj\Debug\net8.0\Company.Project.PL.sourcelink.json

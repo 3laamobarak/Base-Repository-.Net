@@ -68,6 +68,7 @@ namespace Company.Project.Infrastructure.Repositories
             }
             else 
             {
+                _dbContext.Set<T>().Remove(entity);
                 throw new InvalidOperationException("The entity does not have an 'IsDeleted' property.");
             }            
         }

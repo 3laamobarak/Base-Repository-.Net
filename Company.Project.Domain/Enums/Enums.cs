@@ -8,4 +8,9 @@ public class Enums
         validated ,
         expired 
     }
+    public enum GenderType
+    {
+        Male,
+        Female
+    }
 }

@@ -58,3 +58,4 @@ C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Applicatio
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Debug\net8.0\refint\Company.Project.Application.dll
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Debug\net8.0\Company.Project.Application.pdb
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Debug\net8.0\ref\Company.Project.Application.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\obj\Debug\net8.0\Company.Project.Application.sourcelink.json

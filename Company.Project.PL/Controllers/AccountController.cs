@@ -1,94 +1,92 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 using Company.Project.Application.Contracts;
 using Company.Project.Application.DTO;
+using Company.Project.Application.DTO.Account;
+using Company.Project.Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using JwtSecurityTokenHandler = System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler;
 
 namespace Company.Project.PL.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
 
-    public class AccountController : Controller
+    public class AccountController : ControllerBase
     {
-        private readonly UserManager<Domain.Models.Company> userManager;
+        private readonly IAuthService _authService;
+        private readonly UserManager<ApplicationUser> userManager;
         private readonly IConfiguration config;
-        private readonly IOTPService _otpService;
-         private readonly IEmailService _emailservice;
-
-        public AccountController
-            (UserManager<Domain.Models.Company> userManager,IConfiguration config, IOTPService otpService , IEmailService emailservice)
+        private readonly IEmailService _emailservice;
+        public AccountController(IAuthService authService, UserManager<ApplicationUser> userManager, IConfiguration config, IEmailService emailservice)
         {
+            _authService = authService;
             this.userManager = userManager;
-            this._otpService = otpService;
             this.config = config;
-            this._emailservice = emailservice;
+            _emailservice = emailservice;
         }
-        //api/account/register :post
-        [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterCompanyDto userDto)
+        [HttpPost("Register")]
+        public async Task<IActionResult> Register([FromBody] RegisterModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            
+            var result = await _authService.RegisterAsync(model);
+            
+            if (!result.IsAuthenticated)
+                return BadRequest(result.Message);
+            return Ok(result);
+        }
+        [HttpPost("token")]
+        public async Task<IActionResult> GetTokenAsync([FromBody] TokenRequestModel model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = await _authService.GetTokenAsync(model);
+            if (!result.IsAuthenticated)
+                return BadRequest(result.Message);
+            if(!string.IsNullOrEmpty(result.RefreshToken))
             {
-                var existingUser = 
-                    await userManager.FindByEmailAsync(userDto.Email);
-                if (existingUser != null)
-                {
-                    return BadRequest("Email already exists");
-                }
-                var isOtpValid = 
-                    await _otpService.ValidateOTPAsync(userDto.Email, userDto.otpCode);
-                if (!isOtpValid)
-                {
-                    return BadRequest("Invalid OTP code");
-                }
-                Domain.Models.Company company = new Domain.Models.Company()
-                {
-                    UserName = userDto.Email,
-                    Email = userDto.Email,
-                    EnglishName = userDto.EnglishName,
-                    ArabicName = userDto.ArabicName,
-                    Phone = userDto.Phone,
-                    Logo = userDto.Logo,
-                    websiteURL = userDto.WebsiteURL
-                };
-                //create account in db
-                IdentityResult result= 
-                    await  userManager.CreateAsync(company,userDto.Password);       
-                if(result.Succeeded)
-                {
-                    var token = GenerateJwtToken(company);
-                    return Ok(new{Token = token});
-                }
-                return BadRequest(result.Errors);
+                SetRefreshTokenInCookie(result.RefreshToken, result.RefreshTokenExpiration);
             }
-            return BadRequest(ModelState);
+
+            return Ok(result);
+        }
+        
+        [HttpPost("AddRole")]
+        public async Task<IActionResult> AddRoleAsync([FromBody] AddRole model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var result = await _authService.AddRoleAsync(model);
+            
+            if (!string.IsNullOrEmpty(result) && result.Contains("Something went wrong"))
+                return BadRequest(result);
+            
+            return Ok(result);
+        }
+        private void SetRefreshTokenInCookie(string refreshToken, DateTime expires)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = expires.ToLocalTime()
+            };
+            Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
+
+        }
+        [HttpGet("refreshToken")]
+        public async Task<IActionResult> RefreshToken()
+        {
+            var refreshToken = Request.Cookies["refreshToken"];
+            var result = await _authService.RefreshTokenAsync(refreshToken);
+            if(!result.IsAuthenticated)
+                return BadRequest(result);
+
+            SetRefreshTokenInCookie(result.RefreshToken, result.RefreshTokenExpiration);
+            return Ok(result);
+
+
         }
 
-        [HttpPost("Login")]//api/account/login (username /passwor)
-        public async Task<IActionResult> Login(LoginCompanyDTO userDto)
-        {
-            if (ModelState.IsValid){
-                Domain.Models.Company? company=
-                    await  userManager.FindByEmailAsync(userDto.Email);
-                if (company != null)
-                {
-                    bool found=await userManager.CheckPasswordAsync(company, userDto.Password);
-                    if (found)
-                    {
-                        var token = GenerateJwtToken(company);
-                        return Ok(new { Token = token });
-                    }
-                }
-                return Unauthorized("Invalid account");
-            }
-            return BadRequest(ModelState);
-        }
 
         [HttpPost("ChangePassword")]
         public async Task<IActionResult> ChangePassword(ChangePasswordDTO cpDTo)
@@ -145,36 +143,6 @@ namespace Company.Project.PL.Controllers
                 return Ok("Password reset successfully");
             }
             return BadRequest(result.Errors);
-        }
-        
-        private string GenerateJwtToken(Domain.Models.Company company)
-        // private IActionResult GenerateJwtToken(Domain.Models.Company company)
-        {
-            List<Claim> myclaims = new List<Claim>();
-            myclaims.Add(new Claim(ClaimTypes.Email, company.Email));
-            myclaims.Add(new Claim(ClaimTypes.NameIdentifier, company.Id));
-            myclaims.Add(new Claim("EnglishName", company.EnglishName));
-            myclaims.Add(new Claim("ArabicName", company.ArabicName));
-
-            //myclaims.Add(new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()));
-
-            var Key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:SecritKey"]));
-            var creds = new SigningCredentials(Key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: config["JWT:Issuer"],
-                audience: config["JWT:Audience"],
-                claims: myclaims,
-                expires: DateTime.Now.AddHours(1),
-                signingCredentials: creds
-            );
-            return new JwtSecurityTokenHandler().WriteToken(token);
-
-            // return Ok(new
-            // {
-            //     token = new JwtSecurityTokenHandler().WriteToken(token),
-            //     expired = token.ValidTo
-            // });
         }
         
         

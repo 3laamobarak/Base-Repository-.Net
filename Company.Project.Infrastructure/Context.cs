@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Company.Project.Infrastructure
 {
-    public class Context : IdentityDbContext<Domain.Models.Company>
+    public class Context : IdentityDbContext<ApplicationUser>
     {
         public Context() { }
         public Context(DbContextOptions<Context> options) : base(options)
@@ -38,9 +38,9 @@ namespace Company.Project.Infrastructure
             
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<OTP>()
-                .HasOne(otp => otp.Company)
+                .HasOne(otp => otp.User)
                 .WithMany()
-                .HasForeignKey(otp => otp.CompanyId);
+                .HasForeignKey(otp => otp.UserId);
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

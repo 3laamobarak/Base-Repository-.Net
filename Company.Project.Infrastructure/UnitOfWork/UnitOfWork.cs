@@ -10,14 +10,14 @@ namespace Company.Project.Infrastructure.UnitOfWork
         private readonly Context _context;
         public IBaseRepository<ExampleClass> ExampleClass { get; private set; }
         public IBaseRepository<OTP> OTPs { get; private set; }
-        public IBaseRepository<Domain.Models.Company> Companies { get; private set; }
+        public IBaseRepository<ApplicationUser> ApplicationUsers { get; private set; }
         
         public UnitOfWork(Context context )
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
             ExampleClass = new BaseRepository<ExampleClass>(_context);
             OTPs = new BaseRepository<OTP>(_context);
-            Companies = new BaseRepository<Domain.Models.Company>(_context);
+            ApplicationUsers = new BaseRepository<Domain.Models.ApplicationUser>(_context);
         }
 
         public async Task Completeasync()

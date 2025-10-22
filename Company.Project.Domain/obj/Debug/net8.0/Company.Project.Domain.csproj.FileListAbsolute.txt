@@ -35,3 +35,4 @@ C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Domain\obj
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Domain\obj\Debug\net8.0\refint\Company.Project.Domain.dll
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Domain\obj\Debug\net8.0\Company.Project.Domain.pdb
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Domain\obj\Debug\net8.0\ref\Company.Project.Domain.dll
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Domain\obj\Debug\net8.0\Company.Project.Domain.sourcelink.json

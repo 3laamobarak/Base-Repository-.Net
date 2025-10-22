@@ -54,3 +54,4 @@ C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastruc
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Debug\net8.0\ref\Company.Project.Infrastructure.dll
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\bin\Debug\net8.0\Company.Project.Infrastructure.runtimeconfig.json
 C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Debug\net8.0\Company.Project.Infrastructure.genruntimeconfig.cache
+C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Infrastructure\obj\Debug\net8.0\Company.Project.Infrastructure.sourcelink.json
