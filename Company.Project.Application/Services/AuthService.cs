@@ -130,6 +130,14 @@ namespace Company.Project.Application.Services
                 authModel.Message = "Inactive token";
                 return authModel;
             }
+
+            if (!user.RefreshTokens.Any(t => t.Token == token))
+            {
+                authModel.IsAuthenticated = false;
+                authModel.Message = "Token does not belong to the user";
+                return authModel;
+            }
+            
             refreshToken.RevokedOn = DateTime.UtcNow;
             var newRefreshToken = GenerateRefreshToken();
             user.RefreshTokens.Add(newRefreshToken);
@@ -168,7 +176,7 @@ namespace Company.Project.Application.Services
                 issuer: _jwt.Issuer,
                 audience: _jwt.Audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(_jwt.DurationInDays),
+                expires: DateTime.UtcNow.AddDays(_jwt.DurationInDays),
                 signingCredentials: signingCredentials);
 
             return jwtSecurityToken;

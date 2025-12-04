@@ -8,9 +8,14 @@ namespace Company.Project.Infrastructure.UnitOfWork
     public class UnitOfWork :IUnitOfWork
     {
         private readonly Context _context;
+        public IBaseRepository<T>GetRepository<T>() where T : class
+        {
+            return new BaseRepository<T>(_context);
+        }
         public IBaseRepository<ExampleClass> ExampleClass { get; private set; }
         public IBaseRepository<OTP> OTPs { get; private set; }
         public IBaseRepository<ApplicationUser> ApplicationUsers { get; private set; }
+        public IBaseRepository<ImageFile> ImageFiles { get;private set; }
         
         public UnitOfWork(Context context )
         {
@@ -18,6 +23,7 @@ namespace Company.Project.Infrastructure.UnitOfWork
             ExampleClass = new BaseRepository<ExampleClass>(_context);
             OTPs = new BaseRepository<OTP>(_context);
             ApplicationUsers = new BaseRepository<Domain.Models.ApplicationUser>(_context);
+            ImageFiles = new ImageFileRepositories(_context);
         }
 
         public async Task Completeasync()

@@ -6,6 +6,7 @@ namespace Company.Project.Domain.Interfaces
     {
         //IExampleClassRepository ExampleClassRepository { get; }
         IBaseRepository<OTP> OTPs { get; }
+        IBaseRepository<ImageFile> ImageFiles { get; }
         Task Completeasync();
         void Dispose();
     }

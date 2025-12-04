@@ -115,7 +115,10 @@ namespace Company.Project.PL
             builder.Services.AddScoped<IBaseRepository<ExampleClass>, BaseRepository<ExampleClass>>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IImageFileService, ImageFileService>();
+            builder.Services.AddScoped<IBaseRepository<ImageFile>, BaseRepository<ImageFile>>();
             builder.Services.AddSingleton<JWT>();
+            
             var app = builder.Build();
             // Seed Roles
             using (var scope = app.Services.CreateScope())

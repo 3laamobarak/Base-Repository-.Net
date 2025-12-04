@@ -69,7 +69,8 @@ namespace Company.Project.Infrastructure.Repositories
             else 
             {
                 _dbContext.Set<T>().Remove(entity);
-                throw new InvalidOperationException("The entity does not have an 'IsDeleted' property.");
+                await _dbContext.SaveChangesAsync();
+                //throw new InvalidOperationException("The entity does not have an 'IsDeleted' property.");
             }            
         }
         public virtual async Task HardDeleteAsync(T entity)

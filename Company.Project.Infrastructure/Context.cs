@@ -33,6 +33,10 @@ namespace Company.Project.Infrastructure
             {
                 entity.HasQueryFilter(c => !c.IsDeleted);
             });
+            modelBuilder.Entity<ImageFile>(entity =>
+            {
+                entity.HasQueryFilter(c => !c.IsDeleted);
+            });
 
             #endregion
             
@@ -64,6 +68,7 @@ namespace Company.Project.Infrastructure
         #region Dbsets
         public DbSet<ExampleClass> ExClass { get; set; }
         public DbSet<OTP> OTPs { get; set; }
+        public DbSet<ImageFile> ImageFiles { get; set; }
         
 
         #endregion
