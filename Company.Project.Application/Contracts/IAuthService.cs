@@ -8,5 +8,6 @@ namespace Company.Project.Application.Contracts
         Task<AuthModel> GetTokenAsync(TokenRequestModel model);
         Task<string> AddRoleAsync(AddRole model);
         Task<AuthModel> RefreshTokenAsync(string token);
+        Task<bool> RevokeTokenAsync(string token);
     }
 }

@@ -83,9 +83,21 @@ namespace Company.Project.PL.Controllers
 
             SetRefreshTokenInCookie(result.RefreshToken, result.RefreshTokenExpiration);
             return Ok(result);
-
-
         }
+
+        [HttpPost("RevokeToken")]
+        public async Task<IActionResult> RevokeToken()
+        {
+            var token = Request.Cookies["refreshToken"];
+            if (string.IsNullOrEmpty(token))
+                return BadRequest("No token provided");
+            var result = await _authService.RevokeTokenAsync(token);
+            if (!result)
+                return BadRequest("Token revocation failed");
+            Response.Cookies.Delete("refreshToken");
+            return Ok("Token revoked");
+        }
+        
 
 
         [HttpPost("ChangePassword")]

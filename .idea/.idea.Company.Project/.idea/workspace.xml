@@ -10,22 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1509e8e0-9304-4700-8adf-2ed6c59dcb06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IImageFileService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Services/ImageFileService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IImageFileRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/ImageFile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/ImageFileRepositories.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.PL/Controllers/ImageFileController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources/466dda82-6952-48f0-9e1c-e266180c22c0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources/466dda82-6952-48f0-9e1c-e266180c22c0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/ImageFile/EditImageMetaData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/ImageFile/ImageDownloadDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Contracts/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IAuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Contracts/IImageFileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IImageFileService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Application/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Services/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Services/ExampleClassService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Services/ExampleClassService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Services/ImageFileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Services/ImageFileService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IUnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Models/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/ApplicationUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Models/RefreshToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/RefreshToken.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Context.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Migrations/ContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Migrations/ContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/BaseRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/UnitOfWork/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/UnitOfWork/UnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.PL/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.PL/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.PL/Controllers/ImageFileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/Controllers/ImageFileController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +41,12 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/EmailAddressAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Console/src/System/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Net.Mail/src/System/Net/Mail/SmtpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/IO/MemoryStream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Runtime/CompilerServices/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Runtime/CompilerServices/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/649f9a5315084d038b64e29ea11b1fb5b928/3c/32e3ae9b/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79618d88db254d9aa7c84c04b8e7252826ae38/9e/adf28059/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89e2fa23ab0143908c89b1901498628cc90920/b7/afd19cea/String.cs" root0="SKIP_HIGHLIGHTING" />
@@ -65,33 +67,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.Company.Project.PL: IIS Express.executor": "Debug",
-    ".NET Launch Settings Profile.Company.Project.PL: http.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Company.Project.PL: IIS Express.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.Company.Project.PL: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver.localdb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver.localdb&quot;
     ],
-    "rider.external.source.directories": [
-      "C:\\Users\\DELL\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\DELL\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\DELL\\AppData\\Local\\Symbols\\src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\DELL\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\DELL\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\DELL\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Company.Project.PL: IIS Express">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.Company.Project.PL: http">
     <configuration name="Company.Project.PL: site33363-WebDeploy" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
       <riderPublish configuration="Release" platform="Any CPU" publish_profile="site33363-WebDeploy.pubxml" pubxml_path="$PROJECT_DIR$/Company.Project.PL/Properties/PublishProfiles/site33363-WebDeploy.pubxml" user_name="site33363" uuid_high="402070104494064840" uuid_low="-5664260412401038276" />
       <method v="2" />
@@ -174,7 +176,11 @@
       <workItem from="1764606632194" duration="595000" />
       <workItem from="1764834709105" duration="8400000" />
       <workItem from="1764873217737" duration="4003000" />
-      <workItem from="1764881318787" duration="2592000" />
+      <workItem from="1764881318787" duration="3265000" />
+      <workItem from="1765108476028" duration="1353000" />
+      <workItem from="1765110673229" duration="825000" />
+      <workItem from="1765112083488" duration="6053000" />
+      <workItem from="1765131731494" duration="4612000" />
     </task>
     <servers />
   </component>

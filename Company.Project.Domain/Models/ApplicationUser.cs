@@ -68,7 +68,6 @@ namespace Company.Project.Domain.Models
                 throw new ArgumentException("Enter the NID first");
             }
         }
-        public ICollection<RefreshToken>? RefreshTokens { get; set; }
-
+        public ICollection<RefreshToken>? RefreshTokens { get; set; } = new List<RefreshToken>();
     }
 }

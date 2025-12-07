@@ -4,10 +4,11 @@ namespace Company.Project.Domain.Interfaces
 {
     public interface IUnitOfWork :IDisposable
     {
-        //IExampleClassRepository ExampleClassRepository { get; }
+        IBaseRepository<ExampleClass> ExampleClass { get; }
         IBaseRepository<OTP> OTPs { get; }
+        IBaseRepository<ApplicationUser> ApplicationUsers { get; }
         IBaseRepository<ImageFile> ImageFiles { get; }
-        Task Completeasync();
+        Task CompleteAsync();
         void Dispose();
     }
 }

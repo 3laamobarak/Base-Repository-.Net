@@ -22,11 +22,11 @@ namespace Company.Project.Infrastructure.UnitOfWork
             _context = context ?? throw new ArgumentNullException(nameof(context));
             ExampleClass = new BaseRepository<ExampleClass>(_context);
             OTPs = new BaseRepository<OTP>(_context);
-            ApplicationUsers = new BaseRepository<Domain.Models.ApplicationUser>(_context);
-            ImageFiles = new ImageFileRepositories(_context);
+            ApplicationUsers = new BaseRepository<ApplicationUser>(_context);
+            ImageFiles = new BaseRepository<ImageFile>(_context);
         }
 
-        public async Task Completeasync()
+        public async Task CompleteAsync()
         {
             await _context.SaveChangesAsync();
         }

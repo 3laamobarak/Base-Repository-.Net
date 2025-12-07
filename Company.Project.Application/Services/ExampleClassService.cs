@@ -42,7 +42,7 @@ namespace Company.Project.Application.Services
                 Name = createDto.Name
             };
             // await _unitOfWork.ExampleClassRepository.AddAsync(exampleClass);
-            await _unitOfWork.Completeasync();
+            await _unitOfWork.CompleteAsync();
 
             return exampleClass;
         }
@@ -57,7 +57,7 @@ namespace Company.Project.Application.Services
 
             // existingItem.Name = updateDto.Name;
             // await _unitOfWork.ExampleClassRepository.UpdateAsync(existingItem);
-            await _unitOfWork.Completeasync();
+            await _unitOfWork.CompleteAsync();
 
             // return existingItem;
         }
@@ -70,7 +70,7 @@ namespace Company.Project.Application.Services
             }
 
             // await _unitOfWork.ExampleClassRepository.DeleteAsync(existingItem);
-            // await _unitOfWork.Completeasync();
+            // await _unitOfWork.CompleteAsync();
         }
     }
 }

@@ -40,11 +40,21 @@ namespace Company.Project.Infrastructure
 
             #endregion
             
-            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<OTP>()
                 .HasOne(otp => otp.User)
                 .WithMany()
                 .HasForeignKey(otp => otp.UserId);
+            
+            modelBuilder.Entity<RefreshToken>(entity =>
+            {
+                entity.HasIndex(e => e.Token).IsUnique();
+                entity.HasOne(e => e.User)
+                    .WithMany(u => u.RefreshTokens)
+                    .HasForeignKey(e => e.UserId)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+            base.OnModelCreating(modelBuilder);
+
         }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

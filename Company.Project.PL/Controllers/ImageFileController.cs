@@ -1,4 +1,5 @@
 using Company.Project.Application.Contracts;
+using Company.Project.Application.DTO.ImageFile;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Company.Project.PL.Controllers
@@ -8,33 +9,29 @@ namespace Company.Project.PL.Controllers
     public class ImageFileController : ControllerBase
     {
         private readonly IImageFileService _imageFileService;
-
         public ImageFileController(IImageFileService imageFileService)
         {
             _imageFileService = imageFileService;
         }
 
         [HttpPost("upload")]
-        public async Task<IActionResult> UploadImage( IFormFile file)
+        public async Task<IActionResult> UploadFile(IFormFile file)
         {
             if (file == null || file.Length == 0)
                 return BadRequest("No file uploaded.");
 
-            // Validate file type (e.g., only allow images)
-            var allowedTypes = new[] { "image/jpeg", "image/png", "image/gif" };
+            var allowedTypes = new[] { "image/jpeg", "image/png", "image/gif", "application/pdf" };
             if (!allowedTypes.Contains(file.ContentType))
-                return BadRequest("Unsupported file type.");
+                return BadRequest("Only images and PDF are allowed.");
 
-            // Validate file size (e.g., max 5 MB)
-            const long maxFileSize = 5 * 1024 * 1024; // 5 MB
-            if (file.Length > maxFileSize)
-                return BadRequest("File size exceeds the 5 MB limit.");
+            if (file.Length > 10 * 1024 * 1024)
+                return BadRequest("File too large. Max 10MB.");
 
-            using var memoryStream = new MemoryStream();
-            await file.CopyToAsync(memoryStream);
+            using var ms = new MemoryStream();
+            await file.CopyToAsync(ms);
 
-            var imageFile = await _imageFileService.UploadImageAsync(file.FileName, file.ContentType, memoryStream.ToArray());
-            return Ok(new { imageFile.Id, imageFile.FileName });
+            var uploaded = await _imageFileService.UploadImageAsync(file.FileName, file.ContentType, ms.ToArray());
+            return Ok(new { uploaded.Id, uploaded.FileName, uploaded.FileType });
         }
 
         [HttpGet("{id}")]
@@ -42,22 +39,58 @@ namespace Company.Project.PL.Controllers
         {
             try
             {
-                var imageData = await _imageFileService.GetImageAsync(id);
-                var contentType = "application/octet-stream"; // Default content type
-
-                // Optionally, determine the content type based on the file extension
-                // This assumes the file name has an extension (e.g., .jpg, .png)
-                var extension = Path.GetExtension(imageData.ToString()).ToLowerInvariant();
-                if (extension == ".jpg" || extension == ".jpeg") contentType = "image/jpeg";
-                else if (extension == ".png") contentType = "image/png";
-                else if (extension == ".gif") contentType = "image/gif";
-
-                return File(imageData, contentType);
+                var file = await _imageFileService.DownloadFileAsync(id);
+                return new FileContentResult(file.Data, file.FileType)
+                {
+                    FileDownloadName = file.FileName
+                };
             }
             catch (KeyNotFoundException)
             {
-                return NotFound("Image not found.");
+                return NotFound("File not found.");
             }
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteImage(int id)
+        {
+            try
+            {
+                await _imageFileService.DeleteImageAsync(id);
+                return NoContent();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpGet("list")]
+        public async Task<IActionResult> ListAllImages()
+        {
+            var images = await _imageFileService.ListAllImagesAsync();
+            var result = images.Select(x => new
+            {
+                x.Id,
+                x.FileName,
+                x.FileType,
+                x.CreatedAt
+            });
+            return Ok(result);
+        }
+
+        [HttpPut("{id}/edit")]
+        public async Task<IActionResult> EditImageMetadata(int id, [FromBody] EditImageMetaData request)
+        {
+            try
+            {
+                var updated = await _imageFileService.EditImageMetadataAsync(id, request.NewFileName, request.NewFileType);
+                return Ok(new { updated.Id, updated.FileName, updated.FileType });
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
+        
     }
 }
