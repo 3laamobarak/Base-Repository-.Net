@@ -10,21 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1509e8e0-9304-4700-8adf-2ed6c59dcb06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/ImageFile/EditImageMetaData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/ImageFile/ImageDownloadDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IChatBotMessageService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IPaymentGatewayService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/CreatePaymentRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/PaymentResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Services/ChatBotMessageService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IChatBotMessageRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/ChatBotMessages.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/PaymentMethod.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/PaymentTransaction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/ChatBotMessageRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.PL/Controllers/ChatbotController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Contracts/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IAuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Contracts/IImageFileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IImageFileService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Services/AuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Services/ExampleClassService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Services/ExampleClassService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Services/ImageFileService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Services/ImageFileService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Enums/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Enums/Enums.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IUnitOfWork.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Models/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/ApplicationUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Models/RefreshToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/RefreshToken.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Context.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Migrations/ContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Migrations/ContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/BaseRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/UnitOfWork/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/UnitOfWork/UnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.PL/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/Controllers/AccountController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.PL/Controllers/ImageFileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/Controllers/ImageFileController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.PL/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.PL/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +46,22 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/cea5fa610dba4e0c024727f4c528a66018b820a3/src/Identity/Extensions.Core/src/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/cea5fa610dba4e0c024727f4c528a66018b820a3/src/Identity/Extensions.Stores/src/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/fa4d80b76c2431a825be026f6bbabca63e1f42ef/src/Mvc/Mvc.Core/src/Infrastructure/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/efcore/271c94d1d96b2bc0b22f9f60d07f1d93abd0894f/src/EFCore/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/5535e31a712343a63f5d7d796cd874e563e5ac14/src/libraries/Microsoft.Extensions.Configuration/src/ConfigurationManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/coreclr/System.Private.CoreLib/src/System/Type.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.ComponentModel.Annotations/src/System/ComponentModel/DataAnnotations/EmailAddressAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Console/src/System/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Net.Mail/src/System/Net/Mail/SmtpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/DateTime.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/IO/MemoryStream.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Runtime/CompilerServices/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Runtime/CompilerServices/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/TaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/ThreadPoolTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/649f9a5315084d038b64e29ea11b1fb5b928/3c/32e3ae9b/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79618d88db254d9aa7c84c04b8e7252826ae38/9e/adf28059/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89e2fa23ab0143908c89b1901498628cc90920/b7/afd19cea/String.cs" root0="SKIP_HIGHLIGHTING" />
@@ -54,7 +69,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6771d4a4cce39ed533223dc35ed9620b1989fcc3687851d2e401ac1aa69f6f8/SwaggerUIBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -181,6 +196,19 @@
       <workItem from="1765110673229" duration="825000" />
       <workItem from="1765112083488" duration="6053000" />
       <workItem from="1765131731494" duration="4612000" />
+      <workItem from="1765137489842" duration="1665000" />
+      <workItem from="1765299812018" duration="1898000" />
+      <workItem from="1765472196295" duration="915000" />
+      <workItem from="1765640660025" duration="803000" />
+      <workItem from="1765646064660" duration="284000" />
+      <workItem from="1765890810076" duration="604000" />
+      <workItem from="1765984762943" duration="605000" />
+      <workItem from="1766084309448" duration="4347000" />
+      <workItem from="1766156966044" duration="1795000" />
+      <workItem from="1766411182396" duration="563000" />
+      <workItem from="1766415899677" duration="6607000" />
+      <workItem from="1766423592527" duration="1421000" />
+      <workItem from="1766428099773" duration="5889000" />
     </task>
     <servers />
   </component>

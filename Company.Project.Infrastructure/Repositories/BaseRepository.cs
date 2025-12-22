@@ -33,14 +33,14 @@ namespace Company.Project.Infrastructure.Repositories
         public virtual async Task<T> AddAsync(T entity)
         {
             await _dbContext.Set<T>().AddAsync(entity);
-            await _dbContext.SaveChangesAsync();
+            //await _dbContext.SaveChangesAsync();
             return entity;
         }
 
         public virtual async Task UpdateAsync(T entity)
         {
             _dbContext.Set<T>().Update(entity);
-            await _dbContext.SaveChangesAsync();
+            //await _dbContext.SaveChangesAsync();
 
         }
         public async Task<IEnumerable<T>> GetAllAsync(int Skip, int Take)
@@ -64,12 +64,12 @@ namespace Company.Project.Infrastructure.Repositories
             {
                 property.SetValue(entity, true);
                 _dbContext.Set<T>().Update(entity);
-                await _dbContext.SaveChangesAsync();
+                //await _dbContext.SaveChangesAsync();
             }
             else 
             {
                 _dbContext.Set<T>().Remove(entity);
-                await _dbContext.SaveChangesAsync();
+                //await _dbContext.SaveChangesAsync();
                 //throw new InvalidOperationException("The entity does not have an 'IsDeleted' property.");
             }            
         }

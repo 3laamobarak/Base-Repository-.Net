@@ -69,5 +69,8 @@ namespace Company.Project.Domain.Models
             }
         }
         public ICollection<RefreshToken>? RefreshTokens { get; set; } = new List<RefreshToken>();
+        public ICollection<ChatBotMessages>? ChatBotMessages { get; set; } = new List<ChatBotMessages>();
+        public ICollection<PaymentTransaction>? PaymentTransactions { get; set; } = new List<PaymentTransaction>();
+        public ICollection<PaymentMethod>? PaymentMethods { get; set; } = new List<PaymentMethod>();
     }
 }

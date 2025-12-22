@@ -37,6 +37,10 @@ namespace Company.Project.Infrastructure
             {
                 entity.HasQueryFilter(c => !c.IsDeleted);
             });
+            modelBuilder.Entity<ChatBotMessages>(entity =>
+            {
+                entity.HasQueryFilter(c => !c.IsDeleted);
+            });
 
             #endregion
             
@@ -53,6 +57,22 @@ namespace Company.Project.Infrastructure
                     .HasForeignKey(e => e.UserId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
+            modelBuilder.Entity<PaymentMethod>()
+                .HasOne(pm => pm.User)
+                .WithMany(u => u.PaymentMethods)
+                .HasForeignKey(pm => pm.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<PaymentTransaction>()
+                .HasOne(pt => pt.User)
+                .WithMany(u => u.PaymentTransactions)
+                .HasForeignKey(pt => pt.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<ChatBotMessages>()
+                .HasOne(msg => msg.User)
+                .WithMany(u => u.ChatBotMessages)
+                .HasForeignKey(msg => msg.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+            
             base.OnModelCreating(modelBuilder);
 
         }
@@ -79,6 +99,9 @@ namespace Company.Project.Infrastructure
         public DbSet<ExampleClass> ExClass { get; set; }
         public DbSet<OTP> OTPs { get; set; }
         public DbSet<ImageFile> ImageFiles { get; set; }
+        public DbSet<ChatBotMessages> ChatBotMessages { get; set; }
+        public DbSet<PaymentTransaction> PaymentTransactions { get; set; }= null!;
+        public DbSet<PaymentMethod> PaymentMethods { get; set; }= null!;
         
 
         #endregion

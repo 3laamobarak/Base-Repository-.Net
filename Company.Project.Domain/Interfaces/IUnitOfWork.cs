@@ -8,6 +8,8 @@ namespace Company.Project.Domain.Interfaces
         IBaseRepository<OTP> OTPs { get; }
         IBaseRepository<ApplicationUser> ApplicationUsers { get; }
         IBaseRepository<ImageFile> ImageFiles { get; }
+        // IBaseRepository<ChatBotMessages> ChatBotMessages { get; }
+        IChatBotMessageRepository ChatBotMessages { get; }
         Task CompleteAsync();
         void Dispose();
     }

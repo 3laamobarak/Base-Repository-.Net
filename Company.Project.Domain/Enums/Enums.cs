@@ -13,4 +13,18 @@ public class Enums
         Male,
         Female
     }
+
+    public enum TransactionStatus
+    {
+        Pending,
+        Success,
+        Failed,
+        Refunded
+    }
+    public enum MessageSender
+    {
+        User,
+        Bot
+    }
+    
 }

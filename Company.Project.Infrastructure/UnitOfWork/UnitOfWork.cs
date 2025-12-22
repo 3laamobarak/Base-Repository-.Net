@@ -16,7 +16,8 @@ namespace Company.Project.Infrastructure.UnitOfWork
         public IBaseRepository<OTP> OTPs { get; private set; }
         public IBaseRepository<ApplicationUser> ApplicationUsers { get; private set; }
         public IBaseRepository<ImageFile> ImageFiles { get;private set; }
-        
+        // public IBaseRepository<ChatBotMessages> ChatBotMessages { get; private set; }
+        public IChatBotMessageRepository ChatBotMessages { get; private set; }
         public UnitOfWork(Context context )
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
@@ -24,6 +25,7 @@ namespace Company.Project.Infrastructure.UnitOfWork
             OTPs = new BaseRepository<OTP>(_context);
             ApplicationUsers = new BaseRepository<ApplicationUser>(_context);
             ImageFiles = new BaseRepository<ImageFile>(_context);
+            ChatBotMessages = new ChatBotMessageRepository(_context);
         }
 
         public async Task CompleteAsync()

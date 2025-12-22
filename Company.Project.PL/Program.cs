@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using System.Text;
 using Company.Project.Application.Contracts;
 using Company.Project.Application.DTO;
@@ -118,6 +119,13 @@ namespace Company.Project.PL
             builder.Services.AddScoped<IImageFileService, ImageFileService>();
             builder.Services.AddScoped<IBaseRepository<ImageFile>, BaseRepository<ImageFile>>();
             builder.Services.AddSingleton<JWT>();
+            builder.Services.AddScoped<IChatBotMessageRepository, ChatBotMessageRepository>();
+            builder.Services.AddHttpClient<IChatBotMessageService, ChatBotMessageService>(client =>
+            {
+                client.BaseAddress = new Uri(builder.Configuration["OpenAI:BaseUrl"]);
+                client.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer", builder.Configuration["OpenAI:ApiKey"]);
+            });
             
             var app = builder.Build();
             // Seed Roles
