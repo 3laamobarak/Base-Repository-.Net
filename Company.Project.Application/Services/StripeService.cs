@@ -17,7 +17,7 @@ namespace Company.Project.Application.Services
         {
             unitOfWork = _unitofwork;
             _config = config;
-//            StripeConfiguration.ApiKey = _config["Stripe:SecretKey"];
+            StripeConfiguration.ApiKey = _config["Stripe:SecretKey"];
         }
         public async Task<PaymentResultDto> ProcessPaymentAsync(CreatePaymentRequest request, string userId)
         {
