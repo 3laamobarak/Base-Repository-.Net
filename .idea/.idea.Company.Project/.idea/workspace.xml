@@ -9,32 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1509e8e0-9304-4700-8adf-2ed6c59dcb06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Services/StripeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Company.Project.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Company.Project.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Contracts/IPaymentGatewayService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IStripeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/ChangePasswordDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/Account/ChangePasswordDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/EmailDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/OTP/EmailDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/EmailSettingsDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/OTP/EmailSettingsDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/LoginCompanyDTO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/OTPDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/OTP/OTPDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/CreatePaymentRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/CreatePaymentRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/PaymentResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/PaymentResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/RegisterCompanyDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/ResetPasswordDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/Account/ResetPasswordDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IBaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IBaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Models/PaymentTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/PaymentTransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/BaseRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/UnitOfWork/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/UnitOfWork/UnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.PL/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.PL/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="1509e8e0-9304-4700-8adf-2ed6c59dcb06" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,6 +209,7 @@
       <workItem from="1769172534338" duration="142000" />
       <workItem from="1769173311621" duration="4668000" />
       <workItem from="1769241341518" duration="2403000" />
+      <workItem from="1769280714428" duration="398000" />
     </task>
     <servers />
   </component>
@@ -242,24 +218,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Company.Project.Application/Services/StripeService.cs</url>
-          <line>24</line>
-          <properties documentPath="C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\Services\StripeService.cs" initialLine="24" containingFunctionPresentation="Method 'ProcessPaymentAsync'">
-            <startOffsets>
-              <option value="895" />
-            </startOffsets>
-            <endOffsets>
-              <option value="896" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
