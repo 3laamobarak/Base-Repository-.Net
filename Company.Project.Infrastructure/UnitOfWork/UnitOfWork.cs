@@ -18,6 +18,8 @@ namespace Company.Project.Infrastructure.UnitOfWork
         public IBaseRepository<ImageFile> ImageFiles { get;private set; }
         // public IBaseRepository<ChatBotMessages> ChatBotMessages { get; private set; }
         public IChatBotMessageRepository ChatBotMessages { get; private set; }
+        public IBaseRepository<PaymentTransaction> PaymentTransactions { get; private set; }
+        public IBaseRepository<PaymentMethod> PaymentMethods { get; private set; }
         public UnitOfWork(Context context )
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
@@ -26,6 +28,8 @@ namespace Company.Project.Infrastructure.UnitOfWork
             ApplicationUsers = new BaseRepository<ApplicationUser>(_context);
             ImageFiles = new BaseRepository<ImageFile>(_context);
             ChatBotMessages = new ChatBotMessageRepository(_context);
+            PaymentTransactions = new BaseRepository<PaymentTransaction>(_context);
+            PaymentMethods = new BaseRepository<PaymentMethod>(_context);
         }
 
         public async Task CompleteAsync()

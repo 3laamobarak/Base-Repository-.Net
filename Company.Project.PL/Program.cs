@@ -120,6 +120,7 @@ namespace Company.Project.PL
             builder.Services.AddScoped<IBaseRepository<ImageFile>, BaseRepository<ImageFile>>();
             builder.Services.AddSingleton<JWT>();
             builder.Services.AddScoped<IChatBotMessageRepository, ChatBotMessageRepository>();
+            builder.Services.AddScoped<IStripeService, StripeService>();
             builder.Services.AddHttpClient<IChatBotMessageService, ChatBotMessageService>(client =>
             {
                 client.BaseAddress = new Uri(builder.Configuration["OpenAI:BaseUrl"]);

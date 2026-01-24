@@ -10,6 +10,8 @@ namespace Company.Project.Domain.Interfaces
         IBaseRepository<ImageFile> ImageFiles { get; }
         // IBaseRepository<ChatBotMessages> ChatBotMessages { get; }
         IChatBotMessageRepository ChatBotMessages { get; }
+        IBaseRepository<PaymentTransaction> PaymentTransactions { get; }
+        IBaseRepository<PaymentMethod> PaymentMethods { get; }
         Task CompleteAsync();
         void Dispose();
     }

@@ -1,9 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Company.Project.Application.DTO.PaymentDTO
 {
     public class SavePaymentMethodRequest
     {
-        public string Gateway { get; set; } = "paymob";
-        public string CardToken { get; set; } = "";
+        [Required]
+        public string Gateway { get; set; } 
+        [Required]
+        public string CardToken { get; set; }
         public bool SetAsDefault { get; set;  }
     }
 }

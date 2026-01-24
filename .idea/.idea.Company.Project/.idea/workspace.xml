@@ -10,25 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1509e8e0-9304-4700-8adf-2ed6c59dcb06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IChatBotMessageService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IPaymentGatewayService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/CreatePaymentRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/PaymentResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Services/ChatBotMessageService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IChatBotMessageRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/ChatBotMessages.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/PaymentMethod.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/PaymentTransaction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/ChatBotMessageRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Company.Project.PL/Controllers/ChatbotController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Company.Project.Application/Services/StripeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Company.Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Enums/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Enums/Enums.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Company.Project.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Company.Project.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/Contracts/IPaymentGatewayService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/Contracts/IStripeService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/ChangePasswordDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/Account/ChangePasswordDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/EmailDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/OTP/EmailDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/EmailSettingsDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/OTP/EmailSettingsDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/LoginCompanyDTO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/OTPDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/OTP/OTPDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/CreatePaymentRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/CreatePaymentRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/PaymentResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/PaymentResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/PaymentDTO/SavePaymentMethodResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/RegisterCompanyDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Application/DTO/ResetPasswordDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Application/DTO/Account/ResetPasswordDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IBaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IBaseRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Interfaces/IUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Models/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/ApplicationUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Context.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Migrations/ContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Migrations/ContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Company.Project.Domain/Models/PaymentTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Domain/Models/PaymentTransaction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/BaseRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/Repositories/BaseRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.Infrastructure/UnitOfWork/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.Infrastructure/UnitOfWork/UnitOfWork.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Company.Project.PL/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/Program.cs" afterDir="false" />
@@ -57,16 +58,20 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Runtime/CompilerServices/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Runtime/CompilerServices/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/TaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/77545d6fd5ca79bc08198fd6d8037c14843f14ad/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/ThreadPoolTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/81cabf2857a01351e5ab578947c7403a5b128ad1/src/libraries/Microsoft.Extensions.DependencyInjection.Abstractions/src/ServiceProviderServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/649f9a5315084d038b64e29ea11b1fb56d20/ae/0b540bc9/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/649f9a5315084d038b64e29ea11b1fb5b928/3c/32e3ae9b/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79618d88db254d9aa7c84c04b8e7252826ae38/9e/adf28059/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89e2fa23ab0143908c89b1901498628cc90920/b7/afd19cea/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/23c646a82d4df66af1cb96f366d74b6bf136a4ca66a38de00ceae827db540f3/SwaggerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6771d4a4cce39ed533223dc35ed9620b1989fcc3687851d2e401ac1aa69f6f8/SwaggerUIBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ec30f264ef84bfd73ade3b3ca5960f78fd0e94d99ea479ab29739fab452ba/Customer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -86,6 +91,7 @@
   &quot;keyToString&quot;: {
     &quot;.NET Launch Settings Profile.Company.Project.PL: IIS Express.executor&quot;: &quot;Debug&quot;,
     &quot;.NET Launch Settings Profile.Company.Project.PL: http.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.test-payment.html.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -111,6 +117,9 @@
   <component name="RunManager" selected=".NET Launch Settings Profile.Company.Project.PL: http">
     <configuration name="Company.Project.PL: site33363-WebDeploy" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
       <riderPublish configuration="Release" platform="Any CPU" publish_profile="site33363-WebDeploy.pubxml" pubxml_path="$PROJECT_DIR$/Company.Project.PL/Properties/PublishProfiles/site33363-WebDeploy.pubxml" user_name="site33363" uuid_high="402070104494064840" uuid_low="-5664260412401038276" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test-payment.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Company.Project/Company.Project.PL/wwwroot/test-payment.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Company.Project.PL: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -143,6 +152,11 @@
         <option name="Build" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.test-payment.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -208,7 +222,18 @@
       <workItem from="1766411182396" duration="563000" />
       <workItem from="1766415899677" duration="6607000" />
       <workItem from="1766423592527" duration="1421000" />
-      <workItem from="1766428099773" duration="5889000" />
+      <workItem from="1766428099773" duration="6429000" />
+      <workItem from="1767122723995" duration="2502000" />
+      <workItem from="1768638528353" duration="2424000" />
+      <workItem from="1768989110752" duration="4109000" />
+      <workItem from="1769081088250" duration="2016000" />
+      <workItem from="1769092219412" duration="32000" />
+      <workItem from="1769092269237" duration="8048000" />
+      <workItem from="1769106083162" duration="4048000" />
+      <workItem from="1769152386882" duration="2064000" />
+      <workItem from="1769172534338" duration="142000" />
+      <workItem from="1769173311621" duration="4668000" />
+      <workItem from="1769241341518" duration="2403000" />
     </task>
     <servers />
   </component>
@@ -217,5 +242,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Company.Project.Application/Services/StripeService.cs</url>
+          <line>24</line>
+          <properties documentPath="C:\Users\DELL\Desktop\ITI\CompanyTask\Company.Project\Company.Project.Application\Services\StripeService.cs" initialLine="24" containingFunctionPresentation="Method 'ProcessPaymentAsync'">
+            <startOffsets>
+              <option value="895" />
+            </startOffsets>
+            <endOffsets>
+              <option value="896" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
