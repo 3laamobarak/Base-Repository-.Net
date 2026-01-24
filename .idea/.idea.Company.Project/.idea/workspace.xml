@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1509e8e0-9304-4700-8adf-2ed6c59dcb06" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Company.Project.PL/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Company.Project.PL/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="1509e8e0-9304-4700-8adf-2ed6c59dcb06" name="Changes" comment="finish payment" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,6 +214,23 @@
       <workItem from="1769281428981" duration="274000" />
       <workItem from="1769282713402" duration="1470000" />
     </task>
+    <task id="LOCAL-00001" summary="finish payment">
+      <option name="closed" value="true" />
+      <created>1769284831737</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769284831737</updated>
+    </task>
+    <task id="LOCAL-00002" summary="finish payment">
+      <option name="closed" value="true" />
+      <created>1769284938239</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769284938239</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,5 +239,7 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="finish payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish payment" />
   </component>
 </project>
