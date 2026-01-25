@@ -8,6 +8,7 @@ namespace Company.Project.Domain.Interfaces
         Task<IEnumerable<T>> GetAllFilteredAsync(string[] filters);
         Task DeleteRangeAsync(ICollection<T> entities);
         Task<T> GetByIdAsync(int id);
+        Task<T> GetByIdAsync(string id);
         Task<IEnumerable<T>> GetAllAsync();
         Task<IEnumerable<T>> GetAllAsync(int Skip, int Take);
         Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, object>>[] includes = null);

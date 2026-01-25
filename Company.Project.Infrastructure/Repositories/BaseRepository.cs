@@ -18,6 +18,8 @@ namespace Company.Project.Infrastructure.Repositories
         
         public virtual async Task<T> GetByIdAsync(int id) =>
             await _dbContext.Set<T>().FindAsync(id);
+        public virtual async Task<T> GetByIdAsync(string id) =>
+            await _dbContext.Set<T>().FindAsync(id);
 
 
         public IQueryable<T> GetTableNoTracking()=>
