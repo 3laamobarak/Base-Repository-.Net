@@ -23,8 +23,6 @@ mono_crash.*
 [Rr]eleases/
 x64/
 x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
 [Bb]in/
@@ -63,7 +61,6 @@ nunit-*.xml
 [Rr]eleasePS/
 dlldata.c
 
-# Benchmark Results
 BenchmarkDotNet.Artifacts/
 
 # .NET Core
@@ -368,11 +365,15 @@ MigrationBackup/
 .ionide/
 
 # Fody - auto-generated XML schema
-FodyWeavers.xsd. i d e a /  
- . v s /  
- * * / b i n /  
- * * / o b j /  
- * * / . v s /  
- * * / b i n /  
- * * / o b j / 
- 
+FodyWeavers.xsd
+
+.idea/
+.vs/
+**/bin/
+**/obj/
+**/.vs/
+**/bin/
+**/obj/
+
+# Ignore TemplateEngineHost directory
+TemplateEngineHost/
