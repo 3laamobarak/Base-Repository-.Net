@@ -374,11 +374,5 @@ FodyWeavers.xsd. i d e a /
  * * / o b j /  
  * * / . v s /  
  * * / b i n /  
- * * / o b j /  # =======================================
-# Sensitive configuration files
-# =======================================
-appsettings.json
-appsettings.*.json
-appsettings.Development.json
-appsettings.Production.json
+ * * / o b j / 
  
